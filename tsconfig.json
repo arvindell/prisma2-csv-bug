@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": "scripts",
     "lib": ["esnext", "dom"],
     "strict": false,
     "esModuleInterop": true,

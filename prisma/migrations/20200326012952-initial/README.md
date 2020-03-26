@@ -13,7 +13,7 @@ CREATE TABLE `bug`.`User` (
     `updatedAt` datetime(3) NOT NULL DEFAULT '1970-01-01 00:00:00' ,
     `username` varchar(191) NOT NULL DEFAULT '' ,
     PRIMARY KEY (`id`)
-) 
+)
 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 
 CREATE TABLE `bug`.`Patient` (
@@ -34,7 +34,7 @@ CREATE TABLE `bug`.`Patient` (
     `updatedAt` datetime(3) NOT NULL DEFAULT '1970-01-01 00:00:00' ,
     `user` varchar(191) NOT NULL ,
     PRIMARY KEY (`id`)
-) 
+)
 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
 
 CREATE UNIQUE INDEX `User.username` ON `bug`.`User`(`username`)
@@ -102,5 +102,3 @@ migration ..20200326012952-initial
 +  MALE FEMALE NON_BINARY
 +}
 ```
-
-

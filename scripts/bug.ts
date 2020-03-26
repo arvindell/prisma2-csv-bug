@@ -15,8 +15,10 @@ const main = async () => {
       results.push(data);
     })
     .on("end", () => {
-      console.log("FINISHED");
+      console.log("Finished parsing csv");
       console.log("Total rows: " + results.length);
+      console.log("Inserting to database...");
+
       results.forEach(async () => {
         try {
           const newPatient = {
