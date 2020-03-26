@@ -9,16 +9,14 @@ const results = [];
 const main = async () => {
   await prisma.connect();
 
-  fs.createReadStream(path.join(__dirname, "./saad_dbo_clientes.csv"))
+  fs.createReadStream(path.join(__dirname, "./dummy.csv"))
     .pipe(csv())
     .on("data", async data => {
       results.push(data);
     })
     .on("end", () => {
       console.log("FINISHED");
-      console.log("size: " + results.length);
-      console.log(results[results.length - 1]);
-
+      console.log("Total rows: " + results.length);
       results.forEach(async () => {
         try {
           const newPatient = {

@@ -10,10 +10,7 @@
   },
   "dependencies": {
     "cross-env": "^7.0.1",
-    "csv-parser": "^2.3.2",
-    "dotenv": "^8.2.0",
-    "shortid": "^2.2.15",
-    "slugify": "^1.4.0"
+    "csv-parser": "^2.3.2"
   },
   "devDependencies": {
     "@prisma/client": "^2.0.0-preview024",
