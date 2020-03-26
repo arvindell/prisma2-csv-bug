@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+model User {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+  password  String
+}
+
+model Patient {
+  id               String        @id @default(cuid())
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  recordId         String?       @unique
+  user             User
+  name             String
+  sex              Sex
+  birthDate        DateTime
+  phoneNumber      String?
+  landline         String?
+  email            String?
+  photo            String?
+  points           Int?
+  maritalStatus    MaritalStatus
+  advertisingMedia String?
+  occupation       String?
+}
+
+
+enum MaritalStatus {
+  MARRIED SINGLE DIVORCED WIDOWED SEPARATED
+}
+
+
+enum Sex {
+  MALE FEMALE NON_BINARY
+}

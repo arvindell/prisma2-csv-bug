@@ -1,0 +1,19 @@
+{
+  "settings": {
+    "version": "detect"
+  },
+  "globals": {},
+  "env": {
+    "browser": false,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "parser": "babel-eslint",
+  "rules": {
+    "no-class-assign": "off",
+    "no-console": "off",
+    "no-unused-vars": "warn"
+  }
+}

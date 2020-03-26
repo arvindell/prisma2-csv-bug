@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "lib": ["esnext", "dom"],
+    "strict": false,
+    "esModuleInterop": true,
+    "allowJs": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts"]
+}
